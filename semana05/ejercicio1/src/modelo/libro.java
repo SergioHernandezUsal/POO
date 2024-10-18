@@ -7,7 +7,7 @@ public class Libro {
     private int numPaginas;
     private float precio;
 
-    public Libro(Autor autor, String titulo, int Publicacion, int numPaginas, double precio) {
+    public Libro(Autor autor, String titulo, int Publicacion, int numPaginas, float precio) {
         this.autor = autor;
         this.titulo = titulo;
         this.Publicacion = Publicacion;
@@ -35,7 +35,7 @@ public class Libro {
         return precio;
     }
 
-    public float calcularTiempoLectura(int ritmoLectura) {
+    public float tiempoLectura(int ritmoLectura) {
         return (float) numPaginas / ritmoLectura;
     }
 }

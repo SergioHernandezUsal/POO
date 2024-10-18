@@ -15,7 +15,9 @@ public class Autor {
         return nombre + " " + apellidos;
     }
 
-    public boolean isPremioPlaneta() {
+    public boolean PremioPlaneta() {
         return premioPlaneta;
     }
+
+    
 }
