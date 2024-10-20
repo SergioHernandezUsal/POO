@@ -1,15 +1,15 @@
 package modelo;
 
-public class almacen {
+public class Almacen {
     private Libro[] libros;
     private int librosGuardados = 0;
     private int paginasPorMinuto = 1;
 
-    public Almacen(int num) {
-        libros = new Libro[num];
+    public Almacen(int tam) {
+        libros = new Libro[tam];
     }
 
-    public void setPaginasPorMinuto(int paginasPorMinuto) {
+    public void RitmoLectura(int paginasPorMinuto) {
         this.paginasPorMinuto = paginasPorMinuto;
     }
 
@@ -32,7 +32,7 @@ public class almacen {
         float valor = 0;
         int tiempoT = 0;
 
-        for(i=0;i<librosGuardados;i++){
+        for(int i=0;i<librosGuardados;i++){
             Libro libro = libros[i];  
             float tiempoLectura = libro.tiempoLectura(paginasPorMinuto);
     
@@ -41,7 +41,7 @@ public class almacen {
             tiempoT += tiempoLectura;
     
            
-            System.out.printf("| %s | %d | %s | %s | %d | %d | %.2f € |\n",libro.getTitulo(), libro.getPublicacion(), libro.getAutor().getNombreCompleto(), (libro.getAutor().PremioPlaneta() ? "Sí" : "No"), libro.getNumPaginas(), tiempoLectura, libro.getPrecio());                    
+            System.out.printf("| %s | %d | %s | %s | %d | %.2f | %.2f € |\n",libro.getTitulo(), libro.getPublicacion(), libro.getAutor().getNombreCompleto(), (libro.getAutor().PremioPlaneta() ? "Sí" : "No"), libro.getNumPaginas(), tiempoLectura, libro.getPrecio());                    
         }
 
     System.out.println("|-----------------------------------------------------------------------------------|");
